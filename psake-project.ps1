@@ -1,5 +1,5 @@
-Framework 4.5.1
-Include "packages\Hangfire.Build.0.2.5\tools\psake-common.ps1"
+Framework 4.6
+Include "hangfire-build-psake-common.ps1"
 
 Properties {
     $solution = "Hangfire.sln"
