@@ -16,7 +16,7 @@ Properties {
     $ilmerge = "$package_dir\ilmerge.*\tools\ilmerge.exe"
     $xunit = "$package_dir\xunit.runners*\tools\xunit.console.clr4.exe"
     $7zip = "$package_dir\7-Zip.CommandLine.*\tools\7za.exe"
-    $opencover = "$package_dir\OpenCover.*\opencover.console.exe"
+    $opencover = "$package_dir\OpenCover.*\tools\OpenCover.Console.exe"
 
     ### AppVeyor-related
     $appVeyorConfig = "$base_dir\appveyor.yml"

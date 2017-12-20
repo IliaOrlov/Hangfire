@@ -6,9 +6,7 @@ using Hangfire.Common;
 using Hangfire.States;
 using Hangfire.Storage;
 using Moq;
-#if NETFULL
 using Moq.Sequences;
-#endif
 using Xunit;
 
 // ReSharper disable PossibleNullReferenceException

@@ -5,8 +5,8 @@ Properties {
     $solution = "Hangfire.sln"
     $coverage_file = "coverage.xml"
     $coverage_filter = "+[Hangfire.*]* -[*.Tests]* -[*]*.Annotations.* -[*]*.Dashboard.* -[*]*.Logging.* -[*]*.ExpressionUtil.*"
-	$opencover = "packages\OpenCover.*\opencover.console.exe"
-	$xunit2 = "packages\xunit.runner.console.*\tools\xunit.console.exe"
+	$opencover = "packages\OpenCover.*\tools\OpenCover.Console.exe"
+	$xunit2 = "packages\xunit.runner.console.*\tools\net452\xunit.console.exe"
 }
 
 Task Default -Depends Collect
