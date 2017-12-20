@@ -509,9 +509,6 @@
       <LastGenOutput>_PerPageSelector.generated.cs</LastGenOutput>
     </None>
     <None Include="Hangfire.Core.project.json" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard\Content\css\bootstrap.min.css" />
