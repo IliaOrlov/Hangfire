@@ -7,7 +7,6 @@ using Hangfire.Storage;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Xunit;
-
 // ReSharper disable AssignNullToNotNullAttribute
 
 namespace Hangfire.Core.Tests.Common
@@ -179,7 +178,8 @@ namespace Hangfire.Core.Tests.Common
                 JobHelper.SetSerializerSettings(new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.All,
-                    TypeNameAssemblyFormat = FormatterAssemblyStyle.Simple
+                    // https://github.com/JamesNK/Newtonsoft.Json/issues/1269
+                    TypeNameAssemblyFormat = 0 //FormatterAssemblyStyle.Simple
                 });
 
                 var method = typeof (BackgroundJob).GetMethod("DoWork");

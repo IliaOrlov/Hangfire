@@ -1,0 +1,19 @@
+<Project>
+
+  <!-- <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" /> -->
+
+  <PropertyGroup>
+    <Authors></Authors>
+    <Company>Sergey Odinokov</Company>
+    <Copyright>Copyright © 2013-2016 Sergey Odinokov</Copyright>
+	<Product>Hangfire</Product>
+	<PackageProjectUrl>http://hangfire.io/</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.github.com/HangfireIO/Hangfire/master/LICENSE.md</PackageLicenseUrl>
+	
+    <!-- <AssemblyOriginatorKeyFile>..\..\signkey.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <SignAssembly>true</SignAssembly> -->
+
+  </PropertyGroup>
+	
+</Project>

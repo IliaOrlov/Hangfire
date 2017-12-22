@@ -1,38 +1,38 @@
-﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+﻿<#@ template hostspecific="true" #>
 <#@ assembly name="System.Core" #>
-<#@ assembly name="$(TargetPath)" #>
+<#@ assembly name="System.Windows.Forms" #>
+<#@ assembly name="Microsoft.VisualStudio.Shell.Interop.8.0.dll" #>
+<#@ assembly name="EnvDTE.dll" #>
+<#@ assembly name="EnvDTE80.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
-<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Microsoft.VisualStudio.Shell.Interop" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="EnvDTE80" #>
 <#@ output extension=".sql" #>
-
 <#
-    var script = GetStringResource(
-        typeof(Hangfire.SqlServer.IPersistentJobQueue).Assembly, 
-        "Hangfire.SqlServer.Install.sql");
+    var hostServiceProvider = (IServiceProvider)Host;
+    var dte = (EnvDTE.DTE)hostServiceProvider.GetService(typeof(EnvDTE.DTE));
+    var templateProjectItem = dte.Solution.FindProjectItem(Host.TemplateFile);
+    var projectDirectory = Path.GetDirectoryName(templateProjectItem.ContainingProject.FullName);
+
+    var fullPath = 
+    projectDirectory.EndsWith("\\") 
+        ? projectDirectory.Substring(0, projectDirectory.Length-1) 
+        : projectDirectory;
+
+    var installsqlFile = Directory
+        .EnumerateFiles(projectDirectory, "Install.sql", SearchOption.TopDirectoryOnly)
+        .First();
+
+    var script = File.ReadAllText(installsqlFile);
 
     script = script.Replace("$(HangFireSchema)", "HangFire");
 
     Write(script);
 #>
 
-<#+
-private string GetStringResource(System.Reflection.Assembly assembly, string resourceName)
-{
-    using (var stream = assembly.GetManifestResourceStream(resourceName))
-    {
-        if (stream == null) 
-        {
-            throw new InvalidOperationException(String.Format(
-                "Requested resource `{0}` was not found in the assembly `{1}`.",
-                resourceName,
-                assembly));
-        }
-
-        using (var reader = new System.IO.StreamReader(stream))
-        {
-            return reader.ReadToEnd();
-        }
-    }
-}
-#>

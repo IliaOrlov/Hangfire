@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Hangfire")]
-[assembly: AssemblyDescription("Core classes of Hangfire that are independent of any framework.")]
-[assembly: Guid("4deecd4f-19f6-426b-aa87-6cd1a03eaa48")]
+[assembly: Guid("dda432b9-3b1a-4f87-a986-056f5d5ea4d5")]
 [assembly: CLSCompliant(true)]
 [assembly: InternalsVisibleTo("Hangfire.Core.Tests")]
 
