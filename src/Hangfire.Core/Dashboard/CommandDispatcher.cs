@@ -29,14 +29,6 @@ namespace Hangfire.Dashboard
             _command = command;
         }
 
-#if NETFULL
-        [Obsolete("Use the `CommandDispatcher(Func<DashboardContext, bool>)` ctor instead. Will be removed in 2.0.0.")]
-        public CommandDispatcher(Func<RequestDispatcherContext, bool> command)
-        {
-            _command = context => command(RequestDispatcherContext.FromDashboardContext(context));
-        }
-#endif
-
         public Task Dispatch(DashboardContext context)
         {
             if (context.IsReadOnly)

@@ -44,17 +44,12 @@
     
     <PackageReference Include="LibLog" Version="1.5.0" />
   </ItemGroup>
-  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <PackageReference Include="Microsoft.Owin" Version="3.0.1" />
-    <PackageReference Include="Owin" Version="1.0" />
-  </ItemGroup>
-  
+
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
   </ItemGroup>
 
-  
+
   <ItemGroup>
     <Content Include="..\..\content\readme.txt">
       <Pack>true</Pack>
@@ -75,7 +70,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
-    
+
     <Compile Update="Dashboard\Pages\Breadcrumbs.cs">
       <DependentUpon>_Breadcrumbs.cshtml</DependentUpon>
     </Compile>

@@ -29,7 +29,7 @@ namespace Hangfire.Dashboard
     {
         internal static readonly IAuthorizationFilter[] DefaultAuthorizationFilters =
         {
-            new LocalRequestsOnlyAuthorizationFilter()
+            new OwinLocalRequestsOnlyAuthorizationFilter()
         };
 
         internal static readonly string DefaultDashboardPath = "/hangfire";

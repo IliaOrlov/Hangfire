@@ -26,6 +26,7 @@
     <Reference Include="System.Web" />
     <ProjectReference Include="..\..\src\Hangfire.Core\Hangfire.Core.csproj" />
     <ProjectReference Include="..\..\src\Hangfire.SqlServer\Hangfire.SqlServer.csproj" />
+    <ProjectReference Include="..\..\src\Hangfire.Owin\Hangfire.Owin.csproj" />
   </ItemGroup>
 
   <ItemGroup>

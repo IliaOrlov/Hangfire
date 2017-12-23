@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSample", "samples\ConsoleSample\ConsoleSample.csproj", "{C02BB718-2AE4-434C-8668-C894FF663FCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleSample", "samples\ConsoleSample\ConsoleSample.csproj", "{C02BB718-2AE4-434C-8668-C894FF663FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSample", "samples\MvcSample\MvcSample.csproj", "{FE5EAE49-2627-42B6-8C2B-EBE4D45B4D97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcSample", "samples\MvcSample\MvcSample.csproj", "{FE5EAE49-2627-42B6-8C2B-EBE4D45B4D97}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{119DA7FA-B94C-4B63-AEC9-428EF834E0D8}"
 EndProject
@@ -34,11 +34,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{37E2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Core.Tests", "tests\Hangfire.Core.Tests\Hangfire.Core.Tests.csproj", "{E13C3543-39A3-475C-BB43-2E311E634843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.SqlServer.Tests", "tests\Hangfire.SqlServer.Tests\Hangfire.SqlServer.Tests.csproj", "{6DFFA275-C483-4501-823A-741AC9EC0846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.SqlServer.Tests", "tests\Hangfire.SqlServer.Tests\Hangfire.SqlServer.Tests.csproj", "{6DFFA275-C483-4501-823A-741AC9EC0846}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.SqlServer.Msmq", "src\Hangfire.SqlServer.Msmq\Hangfire.SqlServer.Msmq.csproj", "{762BE479-0AEC-47E0-8F9C-34FA54641749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.SqlServer.Msmq.Tests", "tests\Hangfire.SqlServer.Msmq.Tests\Hangfire.SqlServer.Msmq.Tests.csproj", "{DBC6BC12-06AD-4597-9E0F-B77BE754FA2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.SqlServer.Msmq.Tests", "tests\Hangfire.SqlServer.Msmq.Tests\Hangfire.SqlServer.Msmq.Tests.csproj", "{DBC6BC12-06AD-4597-9E0F-B77BE754FA2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F710C9CF-69F9-4373-9B74-ABB185BF985B}"
 	ProjectSection(SolutionItems) = preProject
@@ -55,6 +55,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Core", "src\Hangfire.Core\Hangfire.Core.csproj", "{A39F6714-3C68-4C8A-B370-798C79A115E4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.SqlServer", "src\Hangfire.SqlServer\Hangfire.SqlServer.csproj", "{8A032DDC-44FF-456C-BDF4-A8F8145E35C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Owin", "src\Hangfire.Owin\Hangfire.Owin.csproj", "{3B91805A-BEF7-4540-A939-0D371690AE07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

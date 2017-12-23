@@ -15,13 +15,18 @@
 // License along with Hangfire. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.Collections.Generic;
 
 namespace Hangfire.Dashboard
 {
-    public class LocalRequestsOnlyAuthorizationFilter : IDashboardAuthorizationFilter
+#pragma warning disable 618
+    public class OwinLocalRequestsOnlyAuthorizationFilter : IAuthorizationFilter
+#pragma warning restore 618
     {
-        public bool Authorize(DashboardContext context)
+        public bool Authorize(IDictionary<string, object> owinEnvironment)
         {
+            var context = new Microsoft.Owin.OwinContext(owinEnvironment);
+
             // if unknown, assume not local
             if (String.IsNullOrEmpty(context.Request.RemoteIpAddress))
                 return false;
