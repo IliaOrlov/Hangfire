@@ -468,18 +468,7 @@ WriteLiteral("\r\n");
             #line 109 "..\..\Dashboard\Pages\RecurringJobsPage.cshtml"
                                           
                                             string cronDescription = null;
-#if NETFULL
-                                            try
-                                            {
-                                                cronDescription = string.IsNullOrEmpty(job.Cron) ? null : CronExpressionDescriptor.ExpressionDescriptor.GetDescription(job.Cron);
-                                            }
-                                            catch (FormatException)
-                                            {
-                                            }
-#endif
-                                        
 
-            
             #line default
             #line hidden
 WriteLiteral("\r\n");
