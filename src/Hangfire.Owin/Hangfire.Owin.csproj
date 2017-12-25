@@ -16,7 +16,7 @@
     <PackageTags>hangfire Owin</PackageTags>
     <NoWarn>1701;1702;1705;1591</NoWarn>
     <!--<CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>-->
-    <TargetFrameworks>net45</TargetFrameworks>
+    <TargetFrameworks>net451</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

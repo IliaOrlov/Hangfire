@@ -529,7 +529,11 @@ values (scope_identity(), @queue)";
             {
                 var queue = CreateJobQueue(connection, invisibilityTimeout: null);
 
-                queue.Enqueue(connection, "default", "1");
+                queue.Enqueue(connection,
+#if !NETFULL
+                    null,
+#endif
+                    "default", "1");
 
                 var record = connection.Query("select * from HangFire.JobQueue").Single();
                 Assert.Equal("1", record.JobId.ToString());
